@@ -16,7 +16,7 @@
   },
   "scripts": {
     "dev": "nodemon server.js",
-    "build": "cd client && yarn && cd ../client && yarn",
+    "build": "yarn && cd ../client && yarn && yarn build",
     "start": "node server.js"
   },
   "keywords": [],
