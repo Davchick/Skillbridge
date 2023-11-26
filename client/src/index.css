@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-vietnam bg-light-970 text-dark-150;
+}
+
+input {
+  @apply outline-none appearance-none;
+}
+
+.active {
+  @apply px-6 py-[14px] bg-light-950 rounded-lg;
+}
+
+.title {
+  @apply font-semibold text-[28px] lg:text-[32px];
+}
+
+.text {
+  @apply text-dark-300 text-base;
+}
+
+.btn-primary {
+  @apply rounded-md py-[10px] px-4 text-white hover:bg-orange-500 transition-colors bg-primary;
+}
+
+.bg-logo {
+  position: relative;
+
+}
+.bg-logo::after {
+  content: "";
+  background-image: url("./grayLogo.svg");
+  position: absolute;
+  width: 178px;
+  height: 119px;
+  bottom: 0;
+  right: 0;
+  @apply xl:bg-[url("./md-grayLogo.svg")] xl:w-[362px] xl:h-[250px] xl:left-[55%]
+}
+
+.checkbox {
+  cursor: pointer;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: rgb(241 241 243);
+  border: 1px solid #e4e4e7;
+}
+
+.checkbox:checked {
+  background-color: #262626;
+}
+
+.checkbox:checked::after {
+  content: "";
+  position: absolute;
+  background-image: url("./icons/check.svg");
+  width: 16px;
+  height: 14px;
+  top: 2px;
+  left: 2px;
+}
+
+.hover-link {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffbf66;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.active.hover-link {
+  position: unset;
+  transition: color ease-in 0.2s;
+}
+
+.active.hover-link:hover {
+  color: #ff9500;
+}
+
+.line {
+  @apply relative;
+}
+
+.line::after {
+  content: "";
+  @apply absolute left-0 top-1/2 block h-[1px] w-full bg-gray-700 opacity-50 z-10;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
