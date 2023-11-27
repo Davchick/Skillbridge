@@ -1,32 +1,25 @@
-import express from "express";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
 import authRoutes from "./routes/auth.routes.js";
+import mongoose from "mongoose";
+import express from "express";
+import helmet from "helmet";
+import dotenv from "dotenv";
+import morgan from "morgan";
+import cors from "cors";
 import path from "path";
 
 /* CONFIGURATIONS */
+const __dirname = path.resolve();
 const app = express();
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "../client/dist")));
+app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+app.use(morgan("combined"));
+app.use(cors());
 dotenv.config();
-const __dirname = path.resolve();
-
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
 
 /* ROUTES */
 app.use("/auth", authRoutes);
-
-app.use(express.static(path.join(__dirname, "../client/dist")))
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/dist/index.html"))
-})
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 3000;

@@ -63,7 +63,7 @@ input {
 .checkbox:checked::after {
   content: "";
   position: absolute;
-  background-image: url("./icons/check.svg");
+  background-image: url("../icons/check.svg");
   width: 16px;
   height: 14px;
   top: 2px;
