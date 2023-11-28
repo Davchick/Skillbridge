@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -33,7 +32,6 @@ input {
 
 .bg-logo {
   position: relative;
-
 }
 .bg-logo::after {
   content: "";
@@ -43,7 +41,19 @@ input {
   height: 119px;
   bottom: 0;
   right: 0;
-  @apply xl:bg-[url("./md-grayLogo.svg")] xl:w-[362px] xl:h-[250px] xl:left-[55%]
+  @apply xl:bg-[url("./md-grayLogo.svg")] xl:w-[362px] xl:h-[250px] xl:left-[55%];
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.input {
+  @apply relative w-full h-16 text-dark-400 mt-[10px] p-5 bg-light-970 border rounded-lg font-normal focus:border-primary-750 focus:border-2 active;
 }
 
 .checkbox {
@@ -73,6 +83,7 @@ input {
 .hover-link {
   display: inline-block;
   position: relative;
+  text-wrap: nowrap;
 }
 
 .hover-link::after {

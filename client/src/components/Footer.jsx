@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
+import LinkedIn from "../UI/icons/LinkedIn";
 import Location from "../UI/icons/Location";
-import Phone from "../UI/icons/Phone";
-import Email from "../UI/icons/Email";
 import Facebook from "../UI/icons/Facebook";
 import Twitter from "../UI/icons/Twitter";
-import LinkedIn from "../UI/icons/LinkedIn";
+import Email from "../UI/icons/Email";
+import Phone from "../UI/icons/Phone";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-[50px] px-5 bg-white bottom-0 left-0">
-      <div className="flex flex-wrap justify-between items-start md:justify-evenly xl:justify-center xl:gap-x-[50px] gap-x-4 gap-y-7  pt-6 pb-5 xl:pb-12">
+    <footer className="pt-[50px] px-5 bg-white footer">
+      <div className="flex flex-wrap justify-between items-start px-3 md:justify-evenly xl:justify-center xl:gap-x-[50px] gap-x-4 gap-y-7 pt-6 pb-5 xl:pb-12">
         <div className="inline-flex flex-col gap-y-3 xl:w-[550px]">
           <Link to="/" className="w-11">
             <img className="pb-[30px]" src="./logo.svg" alt="Logotype" />

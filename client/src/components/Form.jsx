@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { useState } from "react";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup"
 
 const Form = ({ formType }) => {
   const navigate = useNavigate();
@@ -184,6 +186,7 @@ const Form = ({ formType }) => {
             <div className="flex gap-x-2 items-center">
               <input
                 className="checkbox"
+                {...register("checkbox")}
                 type="checkbox"
                 onClick={() => setIsDisabled(!isDisabled)}
               />

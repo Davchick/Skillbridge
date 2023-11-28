@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Navigation = ({ styles, onClick }) => {
   return (
     <nav className={styles}>
-      <ul className="flex flex-col gap-3 text-lg items-center font-semibold text-dark-350 md:flex-row md:font-normal md:text-base md:text-dark-150 md:gap-[26px]">
+      <ul className="flex flex-col gap-3 text-lg items-center font-semibold text-dark-350 lg:flex-row lg:font-normal lg:text-base lg:text-dark-150 lg:gap-[26px]">
         <li>
           <NavLink className="hover-link" onClick={onClick} to="/">
             Home

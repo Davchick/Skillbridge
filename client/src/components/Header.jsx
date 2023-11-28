@@ -19,7 +19,7 @@ const Header = () => {
             <img src="./logo.svg" alt="Logotype" />
           </Link>
 
-          <Navigation styles="hidden md:block" />
+          <Navigation styles="hidden lg:block" />
         </div>
 
         <div className="flex items-center gap-x-5">

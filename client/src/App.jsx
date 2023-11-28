@@ -1,14 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import Layout from "./components/Layout";
+import NotFound from "./pages/NotFound";
 import Pricing from "./pages/Pricing";
 import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
-import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
 import About from "./pages/About";
 import Home from "./pages/Home";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
+          <Route path="*" element={<NotFound />} />
           <Route index element={<Home />} />
         </Route>
       </Routes>

@@ -18,7 +18,7 @@ const BurgerMenu = () => {
 
       <div
         onClick={() => clickBurger()}
-        className={`md:hidden inline-flex flex-col gap-[5px] cursor-pointer relative ${
+        className={`lg:hidden inline-flex flex-col gap-[5px] cursor-pointer relative ${
           isClicked && "gap-0"
         }`}
       >
