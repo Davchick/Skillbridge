@@ -53,14 +53,14 @@ input {
 }
 
 .input {
-  @apply relative w-full h-16 text-dark-400 mt-[10px] p-5 bg-light-970 border rounded-lg font-normal focus:border-primary-750 focus:border-2 active;
+  @apply relative w-full h-16 text-dark-400 mt-[10px] bg-light-970 border rounded-lg font-normal focus:border-primary-750 focus:border-2 pl-5 pr-11;
 }
 
 .checkbox {
   cursor: pointer;
   position: relative;
-  width: 24px;
-  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   border-radius: 4px;
   background: rgb(241 241 243);
   border: 1px solid #e4e4e7;

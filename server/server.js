@@ -20,6 +20,9 @@ dotenv.config();
 
 /* ROUTES */
 app.use("/auth", authRoutes);
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+});
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 3000;

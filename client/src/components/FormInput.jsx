@@ -21,7 +21,7 @@ const FormInput = ({ type, label, placeholder, register, name, error }) => {
       {type === "password" && (
         <button
           type="button"
-          className="absolute top-[58px] right-4"
+          className="absolute top-[56px] right-4"
           onClick={showPassword}
         >
           <img

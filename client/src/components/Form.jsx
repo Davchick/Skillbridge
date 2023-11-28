@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup"
+import * as yup from "yup";
 
 const Form = ({ formType }) => {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const Form = ({ formType }) => {
   } = useForm({
     mode: "onBlur",
   });
-
+  console.log(navigator.userAgent);
   const onRegister = async (data) => {
     const loading = toast.loading("Please wait...");
     try {
@@ -24,6 +24,7 @@ const Form = ({ formType }) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "User-Agent": navigator.userAgent,
         },
         body: JSON.stringify(data),
       });
