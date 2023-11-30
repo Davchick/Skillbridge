@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import ky from "ky";
 
 const Form = ({ formType }) => {
   const navigate = useNavigate();
@@ -17,33 +18,19 @@ const Form = ({ formType }) => {
     mode: "onBlur",
   });
   console.log(navigator.userAgent);
+
+  const BASE_URL = ky.create({
+    prefixUrl: "http://localhost:3000/auth/",
+  });
+
   const onRegister = async (data) => {
     const loading = toast.loading("Please wait...");
     try {
-      const res = await fetch("http://localhost:3000/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "User-Agent": navigator.userAgent,
-        },
-        body: JSON.stringify(data),
-      });
-      const responseData = await res.json();
-      if (res.ok === false) {
-        toast.update(loading, {
-          render: responseData,
-          type: "error",
-          isLoading: false,
-          autoClose: 3000,
-          hideProgressBar: false,
-          pauseOnFocusLoss: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: true,
-          theme: "light",
-        });
-        return;
-      }
+      const res = await BASE_URL.post("register", {
+        json: data,
+      }).json();
+      console.log(res);
+
       toast.update(loading, {
         render: "Account created successfully",
         type: "success",
@@ -56,12 +43,11 @@ const Form = ({ formType }) => {
         draggable: true,
         theme: "light",
       });
-
-      console.log(responseData);
       navigate("/");
     } catch (err) {
+      console.log(err.message);
       toast.update(loading, {
-        render: "Something went wrong, please try again",
+        render: err.message,
         type: "error",
         isLoading: false,
         autoClose: 3000,
@@ -78,29 +64,11 @@ const Form = ({ formType }) => {
   const onLogin = async (data) => {
     const loading = toast.loading("Please wait...");
     try {
-      const res = await fetch("http://localhost:3000/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      const responseData = await res.json();
-      if (res.ok === false) {
-        toast.update(loading, {
-          render: responseData,
-          type: "error",
-          isLoading: false,
-          autoClose: 3000,
-          hideProgressBar: false,
-          pauseOnFocusLoss: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: true,
-          theme: "light",
-        });
-        return;
-      }
+      const res = await BASE_URL.post("login", {
+        json: data,
+      }).json();
+      console.log(res);
+
       toast.update(loading, {
         render: "You logged in successfully",
         type: "success",
@@ -113,12 +81,11 @@ const Form = ({ formType }) => {
         draggable: true,
         theme: "light",
       });
-
-      console.log(responseData);
       navigate("/");
     } catch (err) {
+      console.log(err);
       toast.update(loading, {
-        render: "Something went wrong, please try again",
+        render: err.message,
         type: "error",
         isLoading: false,
         autoClose: 3000,
