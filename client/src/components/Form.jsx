@@ -1,11 +1,11 @@
+import ky from "ky";
 import FormInput from "./FormInput";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import ky from "ky";
+import { ValidationSchema } from "../utils/validation/yup";
 
 const Form = ({ formType }) => {
   const navigate = useNavigate();
@@ -16,8 +16,8 @@ const Form = ({ formType }) => {
     formState: { errors },
   } = useForm({
     mode: "onBlur",
+    resolver: yupResolver(ValidationSchema),
   });
-  console.log(navigator.userAgent);
 
   const BASE_URL = ky.create({
     prefixUrl: "http://localhost:3000/auth/",
@@ -119,11 +119,7 @@ const Form = ({ formType }) => {
               label="Full Name"
               name="fullName"
               register={register("fullName", {
-                required: "Name is required",
-                minLength: {
-                  value: 2,
-                  message: "Name should to include minimum 2 symbols",
-                },
+                required: "Name is a required field",
               })}
               error={errors.fullName ? errors.fullName.message : ""}
             />
@@ -132,9 +128,7 @@ const Form = ({ formType }) => {
               type="email"
               label="Email"
               name="email"
-              register={register("email", {
-                required: "Email is required",
-              })}
+              register={register("email")}
               error={errors.email ? errors.email.message : ""}
             />
             <FormInput
@@ -142,13 +136,7 @@ const Form = ({ formType }) => {
               type="password"
               label="Password"
               name="password"
-              register={register("password", {
-                required: "Password is required",
-                minLength: {
-                  value: 5,
-                  message: "Password should to include minimum 5 symbols",
-                },
-              })}
+              register={register("password")}
               error={errors.password ? errors.password.message : ""}
             />
             <div className="flex gap-x-2 items-center">
@@ -203,22 +191,18 @@ const Form = ({ formType }) => {
           >
             <FormInput
               placeholder="Email"
-              label="Email"
               type="email"
+              label="Email"
               name="email"
-              register={register("email", {
-                required: "Email Address is required",
-              })}
+              register={register("email")}
               error={errors.email ? errors.email.message : ""}
             />
             <FormInput
               placeholder="Password"
-              label="Password"
               type="password"
+              label="Password"
               name="password"
-              register={register("password", {
-                required: "Password is required",
-              })}
+              register={register("password")}
               error={errors.password ? errors.password.message : ""}
             />
             <Link to="/forgot" className="ml-auto hover:underline w-fit">
