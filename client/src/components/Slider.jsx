@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState } from "react";
 import "swiper/css/bundle";
-import slides from "./slider.json";
+import slides from "../data/slider.json";
 
 const Slider = () => {
   const [slider, setSlider] = useState({});
