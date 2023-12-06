@@ -1,5 +1,5 @@
 import Form from "../components/Form";
-import Slider from "../components/slider/Slider";
+import Slider from "../components/Slider/Slider";
 
 const Login = () => {
   return (
