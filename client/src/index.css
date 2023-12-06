@@ -69,15 +69,19 @@ input {
 .checkbox:checked {
   background-color: #262626;
 }
-
-.checkbox:checked::after {
+.checkbox::after {
   content: "";
   position: absolute;
   background-image: url("../icons/check.svg");
+  visibility: hidden;
   width: 16px;
   height: 14px;
   top: 2px;
   left: 2px;
+}
+
+.checkbox:checked::after {
+  visibility: visible;
 }
 
 .hover-link {

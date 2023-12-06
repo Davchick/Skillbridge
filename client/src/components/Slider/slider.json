@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Michael G.",
+    "image": "../slider-img-1.jpg",
+    "text": "The UX/UI design course was a game-changer for me. The hands-on projects and feedback sessions improved my design skills significantly. The instructors were top-notch, and I now feel ready to take on real-world design challenges."
+  },
+  {
+    "name": "Sarah L.",
+    "image": "../slider-img-2.jpg",
+    "text": "The web design course provided a solid foundation for me. The instructors were knowledgeable and supportive, and the interactive learning environment was engaging. I highly recommend it!"
+  },
+
+  {
+    "name": "Mustafa K.",
+    "image": "../slider-img-3.jpg",
+    "text": "I found the data science program to be incredibly comprehensive. The hands-on projects and real-world applications helped me gain practical skills that I can use in my career. Excellent course!"
+  },
+  {
+    "name": "Alex K.",
+    "image": "../slider-img-4.jpg",
+    "text": "As a beginner in programming, I enrolled in the introductory coding course. The step-by-step approach and clear explanations made it easy for me to grasp the concepts. I feel much more confident now!"
+  },
+  {
+    "name": "Makar S.",
+    "image": "../slider-img-5.jpg",
+    "text": "The machine learning course exceeded my expectations. The content was well-organized, and the balance between theory and practical implementation was perfect. I'm grateful for the valuable insights gained."
+  }
+]

@@ -100,7 +100,7 @@ const Form = ({ formType }) => {
   };
 
   return (
-    <div className="p-[30px] my-[50px] bg-white rounded-[10px] max-w-[540px] relative m-auto">
+    <div className="p-[30px] my-[50px] bg-white rounded-[10px] max-w-[540px] relative m-auto lg:mx-0 w-full md:min-w-[430px]">
       {formType === "register" ? (
         <>
           <div className="text-center pb-[30px]">
@@ -142,9 +142,8 @@ const Form = ({ formType }) => {
             <div className="flex gap-x-2 items-center">
               <input
                 className="checkbox"
-                {...register("checkbox")}
                 type="checkbox"
-                onClick={() => setIsDisabled(!isDisabled)}
+                {...register("checkbox", { required: true })}
               />
               <p className="text-dark-400">
                 I agree with{" "}
@@ -153,11 +152,7 @@ const Form = ({ formType }) => {
                 <span className="underline cursor-pointer">Privacy Policy</span>
               </p>
             </div>
-            <button
-              type="submit"
-              className="btn-primary bg-primary"
-              disabled={isDisabled}
-            >
+            <button type="submit" className="btn-primary bg-primary">
               Sign Up
             </button>
             <div className="line">

@@ -1,8 +1,12 @@
 import Form from "../components/Form";
+import Slider from "../components/slider/Slider";
 
 const SignUp = () => {
   return (
-   <Form formType={"register"}/>
+    <div className="lg:flex flex-row-reverse items-center justify-between gap-10">
+      <Form formType={"register"} />
+      <Slider />
+    </div>
   );
 };
 
