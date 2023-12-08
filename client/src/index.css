@@ -22,9 +22,8 @@ input {
   @apply font-semibold text-[28px] lg:text-[32px];
 }
 
-
-.rotate-icon{
-  transform: rotate(225deg)
+.rotate-icon {
+  transform: rotate(225deg);
 }
 
 .text {
@@ -119,6 +118,20 @@ input {
 .active.hover-link:hover {
   color: #ff9500;
 }
+
+.step-line:not(:last-child) {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+@media (min-width: 1024px) {
+  .step-line:not(:last-child) {
+      padding-bottom: 0;
+      border-bottom: none;
+      border-right: 1px solid #e4e4e7
+    }
+}
+
 
 .line {
   @apply relative;

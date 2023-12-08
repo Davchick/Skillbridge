@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Web Design Fundamentals",
+    "description": "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites.",
+    "images": ["../courses-1.jpg", "../courses-2.jpg", "../courses-3.jpg"],
+    "period": "4 Weeks",
+    "difficulty": "Beginner",
+    "author": "John Smith",
+    "steps": [
+      "Introduction to HTML",
+      "Styling with CSS",
+      "Introduction to Responsive Design",
+      "Design Principles for Web",
+      "Building a Basic Website"
+    ]
+  },
+  {
+    "title": "UI/UX Design",
+    "description": "Master the art of creating intuitive user interfaces (UI) and enhancing user experiences (UX). Learn design principles, wireframing, prototyping, and usability testing techniques.",
+    "images": ["../courses-4.jpg", "../courses-5.jpg", "../courses-6.jpg"],
+    "period": "6 Weeks",
+    "difficulty": "Intermediate",
+    "author": "Emily Johnson",
+    "steps": [
+      "Introduction to UI/UX Design",
+      "User Research and Personas",
+      "Wireframing and Prototyping",
+      "Visual Design and Branding",
+      "Usability Testing and Iteration"
+    ]
+  },
+  {
+    "title": "Mobile App Development",
+    "description": "Dive into the world of mobile app development. Learn to build native iOS and Android applications using industry-leading frameworks like Swift and Kotlin.",
+    "images": ["../courses-7.jpg", "../courses-8.jpg", "../courses-9.jpg"],
+    "period": "12 Weeks",
+    "difficulty": "Intermediate",
+    "author": "David Brown",
+    "steps": [
+      "Introduction to Mobile App Development",
+      "Fundamentals of Swift Programming (iOS)",
+      "Fundamentals of Kotlin Programming (Android)",
+      "Building User Interfaces",
+      "App Deployment and Testing"
+    ]
+  },
+  {
+    "title": "Graphic Design for Beginners",
+    "description": "Discover the fundamentals of graphic design, including typography, color theory, layout design, and image manipulation techniques. Create visually stunning designs for print and digital media.",
+    "images": ["../courses-10.jpg", "../courses-11.jpg", "../courses-12.jpg"],
+    "period": "10 Weeks",
+    "difficulty": "Beginner",
+    "author": "Sarah Thompson",
+    "steps": [
+      "Introduction to Graphic Design",
+      "Typography and Color Theory",
+      "Layout Design and Composition",
+      "Image Editing and Manipulation",
+      "Designing for Print and Digital Media"
+    ]
+  },
+  {
+    "title": "Frontend Web Development",
+    "description": "Become proficient in front-end web development. Learn HTML, CSS, JavaScript, and popular frameworks like Bootstrap and React. Build interactive and responsive websites.",
+    "images": ["../courses-13.jpg", "../courses-14.jpg", "../courses-15.jpg"],
+    "period": "20 Weeks",
+    "difficulty": "Intermediate",
+    "author": "Michael Adams",
+    "steps": [
+      "HTML Fundamentals",
+      "CSS Styling and Layouts",
+      "JavaScript Basics",
+      "Building Responsive Websites",
+      "Introduction to Tailwind and React"
+    ]
+  }
+]

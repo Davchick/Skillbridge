@@ -40,7 +40,7 @@ const Pricing = () => {
       </div>
 
       {/* Price Plans */}
-      <div className="bg-white rounded-xl p-5 text-center flex flex-col gap-[30px] lg:p-12 lg:flex-row w-fit m-auto mb-[90px] lg:mb-[170px]">
+      <div className="bg-white rounded-xl p-5 text-center flex flex-col gap-[30px] lg:p-12 lg:flex-row w-fit m-auto mb-[90px] lg:mb-[120px]">
         <PricingPlan period={isActive} price={freePrice} type={"free"} />
         <PricingPlan period={isActive} price={proPrice} type={"pro"} />
       </div>
