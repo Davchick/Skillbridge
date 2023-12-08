@@ -11,7 +11,7 @@ const BurgerMenu = () => {
     <>
       <div
         onClick={() => clickBurger()}
-        className={`absolute top-0 left-0 w-full h-[100vh] bg-dark opacity-40 z-10 cursor-pointer transition-all ${
+        className={`absolute top-0 left-0 w-full h-full bg-dark opacity-40 z-10 cursor-pointer transition-all ${
           isClicked ? " block" : "hidden"
         }`}
       ></div>

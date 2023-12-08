@@ -8,11 +8,10 @@ const PricingPlan = ({ period, price, type }) => {
       return "../icons/pricing-cross.svg";
     }
   };
-  console.log(getIcon("true"));
   return (
-    <div className="bg-light-970 rounded-xl p-5 pt-[30px]">
+    <div className="bg-light-970 rounded-xl p-5 pt-[30px] w-fit m-auto">
       <h4 className="font-medium py-2 rounded bg-primary-970 border-2 border-primary-950">
-        Free Plan
+        {type === "free" ? "Free" : "Pro"} Plan
       </h4>
       <span className="font-medium text-dark-300 py-[20px] block">
         <span className="text-[50px] font-semibold text-dark-150">

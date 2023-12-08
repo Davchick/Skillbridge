@@ -22,6 +22,11 @@ input {
   @apply font-semibold text-[28px] lg:text-[32px];
 }
 
+
+.rotate-icon{
+  transform: rotate(225deg)
+}
+
 .text {
   @apply text-dark-300 text-base;
 }

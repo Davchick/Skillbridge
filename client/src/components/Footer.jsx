@@ -8,7 +8,7 @@ import Phone from "../UI/icons/Phone";
 
 const Footer = () => {
   return (
-    <footer className="pt-[50px] px-5 bg-white footer">
+    <footer className="pt-[50px] px-5 bg-white footer lg:mt-[100px]">
       <div className="flex flex-wrap justify-between items-start px-3 md:justify-evenly xl:justify-center xl:gap-x-[50px] gap-x-4 gap-y-7 pt-6 pb-5 xl:pb-12">
         <div className="inline-flex flex-col gap-y-3 xl:w-[550px]">
           <Link to="/" className="w-11">

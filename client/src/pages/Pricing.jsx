@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import PageInfo from "../components/PageInfo";
 import PricingPlan from "../components/PricingPlan";
+import items from "../data/faq.json";
+import FAQItem from "../components/FAQItem";
 
 const Pricing = () => {
   const [isActive, setIsActive] = useState("monthly");
@@ -35,11 +38,42 @@ const Pricing = () => {
           Yearly
         </button>
       </div>
-        
+
       {/* Price Plans */}
-      <div className="bg-white rounded-xl p-5 text-center flex gap-[30px] flex-wrap w-fit m-auto mb-[170px]">
+      <div className="bg-white rounded-xl p-5 text-center flex flex-col gap-[30px] lg:p-12 lg:flex-row w-fit m-auto mb-[90px] lg:mb-[170px]">
         <PricingPlan period={isActive} price={freePrice} type={"free"} />
         <PricingPlan period={isActive} price={proPrice} type={"pro"} />
+      </div>
+
+      {/* FAQ */}
+      <div className="rounded-xl bg-white p-6 mb-[50px] flex flex-col gap-x-20 justify-between lg:flex-row lg:p-8 xl:p-14">
+        <div className="mb-10 lg:max-w-[450px]">
+          <h2 className="title pb-2">Frequently Asked Questions</h2>
+          <p className="text-dark-200 pb-5">
+            Still you have any questions? Contact our Team via{" "}
+            <Link to="mailto:support@skillbridge.com" className="underline">
+              support@skillbridge.com
+            </Link>
+          </p>
+          <button
+            type="button"
+            className="border py-[14px] px-5 rounded-md font-medium "
+          >
+            See All FAQ
+          </button>
+        </div>
+
+        <div className="flex flex-col gap-y-5 w-fit m-auto lg:m-0">
+          {items.map((item) => {
+            return (
+              <FAQItem
+                question={item.question}
+                answer={item.answer}
+                key={item.question}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );
