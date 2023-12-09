@@ -20,13 +20,13 @@ const Form = ({ formType }) => {
   });
 
   const BASE_URL = ky.create({
-    prefixUrl: import.meta.env.BASE_URL,
+    prefixUrl: import.meta.env.VITE_BASE_URL,
   });
 
   const onRegister = async (data) => {
     const loading = toast.loading("Please wait...");
     try {
-      const res = await BASE_URL.post("register", {
+      const res = await BASE_URL.post("auth/register", {
         json: data,
       }).json();
       console.log(res);
@@ -64,7 +64,7 @@ const Form = ({ formType }) => {
   const onLogin = async (data) => {
     const loading = toast.loading("Please wait...");
     try {
-      const res = await BASE_URL.post("login", {
+      const res = await BASE_URL.post("auth/login", {
         json: data,
       }).json();
       console.log(res);
