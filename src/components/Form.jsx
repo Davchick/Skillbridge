@@ -20,7 +20,7 @@ const Form = ({ formType }) => {
   });
 
   const BASE_URL = ky.create({
-    prefixUrl: "http://localhost:3000/auth/",
+    prefixUrl: import.meta.env.BASE_URL,
   });
 
   const onRegister = async (data) => {
