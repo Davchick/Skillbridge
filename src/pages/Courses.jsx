@@ -12,7 +12,7 @@ const Courses = () => {
       <div className="flex flex-col gap-y-4 my-[50px]">
         {courses.map((course) => {
           return (
-            <div key={course.title} className="p-6 bg-white rounded-lg border">
+            <div key={course.title} className="p-6 bg-white rounded-lg">
               <div className="flex flex-col gap-5 lg:flex-row lg:items-center">
                 <div>
                   <h5 className="font-semibold text-lg text-dark-150">
@@ -22,7 +22,7 @@ const Courses = () => {
                 </div>
                 <button
                   type="button"
-                  className="py-[14px] px-4 rounded-md bg-light-970 border font-medium w-min whitespace-nowrap cursor-pointer h-fit"
+                  className="py-[14px] px-4 rounded-md bg-light-970 border font-medium w-min whitespace-nowrap cursor-pointer h-fit hover:bg-light-950"
                 >
                   View Course
                 </button>

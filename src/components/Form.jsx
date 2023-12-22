@@ -23,7 +23,7 @@ const Form = ({ formType }) => {
     prefixUrl: import.meta.env.VITE_BASE_URL,
   });
 
-  const onRegister = async (data) => {
+  const onRegister = async (data) => {    
     const loading = toast.loading("Please wait...");
     try {
       const res = await BASE_URL.post("auth/register", {
